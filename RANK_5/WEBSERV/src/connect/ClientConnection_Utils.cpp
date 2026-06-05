@@ -61,7 +61,6 @@ std::string	ClientConnection::generateAutoindex(const std::string& dirPath)
 	return (response.str());
 }
 
-
 /*
  * Function: ClientConnection::ensureDirectoryExists
  * Role: Verify that the provided path already exists and is a directory.
@@ -83,7 +82,6 @@ bool	ClientConnection::ensureDirectoryExists(const std::string& path) const
 	return (S_ISDIR(st.st_mode));
 }
 
-
 /*
  * Function: ClientConnection::getMaxBodySize
  * Role: Determine the active body-size limit considering route overrides.
@@ -100,7 +98,6 @@ size_t	ClientConnection::getMaxBodySize(void) const
 		return (this->_config->clientMaxBodySize);
 	return (0);
 }
-
 
 /*
  * Function: toLower
@@ -122,7 +119,6 @@ std::string	toLower(const std::string& s)
 	}
 	return out;
 }
-
 
 /*
  * Function: getContentLength

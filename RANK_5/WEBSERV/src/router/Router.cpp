@@ -54,8 +54,6 @@ static std::string normalizePath(const std::string& in) {
 	return out;
 }
 
-
-
 /*
  * Function: selectRoute
  * Role: Choose the best matching route for the normalized URI.
@@ -114,7 +112,6 @@ const RouteConfig* Router::matchRoute(const ServerConfig& cfg, const std::string
 	std::string norm = normalizePath(uri);
 	return selectRoute(cfg, norm);
 }
-
 
 /*==============================================================*/
 /*                        HTTP ROUTING                          */
@@ -186,8 +183,6 @@ std::string Router::resolvePath(std::string& uri, const ServerConfig& cfg) {
 
 	return fullPath;
 }
-
-
 
 /*==============================================================*/
 /*                        ERROR HANDLING                        */

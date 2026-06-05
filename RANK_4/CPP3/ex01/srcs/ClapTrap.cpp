@@ -25,7 +25,7 @@ ClapTrap::ClapTrap(void)
 	_energyPt(CLAPTRAP_DEF_ENERGY_PT),
 	_attackDmg(CLAPTRAP_DEF_ATTACK_DMG) {
 		std::cout << "ClapTrap default constructor called, he is called ClapTrap!" << std::endl;
-}	
+}
 
 // Named: custom name, default stats
 ClapTrap::ClapTrap(std::string name)
@@ -106,7 +106,6 @@ void	ClapTrap::attack(std::string &target)
 			  << " damage! 💥"
 			  << std::endl;
 }
-
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {

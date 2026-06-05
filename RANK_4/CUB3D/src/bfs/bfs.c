@@ -23,10 +23,10 @@
 /*
  * Function: check_no_leak
  * Role: Perform BFS from player to detect any map leaks.
- * 
+ *
  * Parameters:
  *   map - NULL-terminated array of map row strings.
- * 
+ *
  * Returns:
  *   SUCCESS if no leaks detected; otherwise FAILURE.
  */

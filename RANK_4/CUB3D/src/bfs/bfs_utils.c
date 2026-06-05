@@ -23,12 +23,12 @@
 /*
  * Function: is_out_of_bounds
  * Role: Check if row or column index is outside map bounds.
- * 
+ *
  * Parameters:
  *   ctx - BFS context with map and dimensions.
  *   ni  - Row index to check.
  *   nj  - Column index to check.
- * 
+ *
  * Returns:
  *   1 if out of bounds; otherwise 0.
  */
@@ -44,7 +44,7 @@ static int	is_out_of_bounds(t_bfs *ctx, int ni, int nj)
 /*
  * Function: mark_and_enqueue
  * Role: Mark position visited and add it to the BFS queue.
- * 
+ *
  * Parameters:
  *   ctx  - BFS context with visited array and queues.
  *   ni   - Row index to enqueue.
@@ -62,13 +62,13 @@ static void	mark_and_enqueue(t_bfs *ctx, int ni, int nj, int *rear)
 /*
  * Function: process_direction
  * Role: Enqueue valid unvisited neighbor if it is not a wall.
- * 
+ *
  * Parameters:
  *   ctx  - BFS context with map and visited flags.
  *   ni   - Neighbor row index.
  *   nj   - Neighbor column index.
  *   rear - Pointer to queue rear index.
- * 
+ *
  * Returns:
  *   SUCCESS if processed; FAILURE if out of bounds.
  */
@@ -87,13 +87,13 @@ static int	process_direction(t_bfs *ctx, int ni, int nj, int *rear)
 /*
  * Function: check_neighbors
  * Role: Check and enqueue neighbors in all four directions.
- * 
+ *
  * Parameters:
  *   ctx  - BFS context with map and queues.
  *   ci   - Current row index.
  *   cj   - Current column index.
  *   rear - Pointer to queue rear index.
- * 
+ *
  * Returns:
  *   SUCCESS if all neighbors processed; FAILURE on error.
  */
@@ -128,12 +128,12 @@ static int	check_neighbors(t_bfs *ctx, int ci, int cj, int *rear)
 /*
  * Function: bfs_no_leak
  * Role: Perform BFS from start to detect any map leaks.
- * 
+ *
  * Parameters:
  *   ctx - BFS context with map, visited flags, and queues.
  *   si  - Start row index.
  *   sj  - Start column index.
- * 
+ *
  * Returns:
  *   SUCCESS if no leaks; otherwise FAILURE.
  */

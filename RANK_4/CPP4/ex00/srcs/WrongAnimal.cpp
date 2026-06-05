@@ -21,7 +21,7 @@
 // Default: type="Weird thing", use default stats
 WrongAnimal::WrongAnimal(void) : _type("*NOT* Weird thing") {
 		std::cout << "WrongAnimal default constructor called" << std::endl;
-}	
+}
 
 // type: custom type, default stats
 WrongAnimal::WrongAnimal(std::string const &type) : _type(type) {
@@ -62,7 +62,7 @@ std::string	const	&WrongAnimal::getType(void) const {
 void	WrongAnimal::makeSound(void) const {
 	std::cout << this->_type << " said : I̶̤̜̤͑͊ ̴͈̂̇͠Ľ̴̛͉̥̳̂Ŏ̴̱̳̊̕V̴͔̐̐͜É̸̺̏ ̸̳̕Y̸̡̳̮̿Ȯ̷̖̖̦Ų̶̯̪̑́" << std::endl;
 }
- 
+
 /*
  * -----------------------------------------------------------
  * 						DECONSTRUCTOR

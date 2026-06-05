@@ -31,7 +31,6 @@ ServerSocket::ServerSocket(const ServerConfig& cfg)
 	this->parameterize(cfg.port);
 }
 
-
 /*==============================================================*/
 /*                        DESTRUCTORS                           */
 /*==============================================================*/
@@ -45,7 +44,6 @@ ServerSocket::~ServerSocket(void)
 	if (this->_fd >= 0)
 		close(this->_fd);
 }
-
 
 /*==============================================================*/
 /*         SOCKET INITIALIZATION / CONNECTION MANAGEMENT        */
@@ -113,7 +111,6 @@ void	ServerSocket::bindAndListen(void)
 	}
 }
 
-
 /*
  * Function: ServerSocket::acceptConnection
  * Role: Accept a pending client connection and return its descriptor.
@@ -156,7 +153,6 @@ int	ServerSocket::getFd(void)
 {
 	return (this->_fd);
 }
-
 
 /*
  * Function: ServerSocket::getConfig

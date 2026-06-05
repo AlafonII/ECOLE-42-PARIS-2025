@@ -37,7 +37,6 @@ struct RouteConfig
 	std::vector<std::string>	allowedMethods;     // HTTP verbs allowed on this route
 };
 
-
 /*==============================================================*/
 /*                           ServerConfig                       */
 /*==============================================================*/

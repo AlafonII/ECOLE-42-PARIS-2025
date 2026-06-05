@@ -48,7 +48,6 @@ Fixed::Fixed(const float f) : _rawBits(roundf(f * (1 << _fracBits))) {
 	// std::cout << "Float constructor called" << std::endl;
 }
 
-
 /*
  * -----------------------------------------------------------
  * 						OPERATOR
@@ -127,7 +126,7 @@ Fixed Fixed::operator/(Fixed const &rhs) const
 Fixed &Fixed::operator++(void)
 {
 	this->_rawBits++;	// step raw value up
-	return *this;		// return updated object	
+	return *this;		// return updated object
 }
 
 // Postfix increment: return old value, then increment

@@ -62,7 +62,7 @@ Brain	*Dog::getBrain(void) const {
 void	Dog::makeSound(void) const {
 	std::cout << this->_type << " said : BARK BARK BARK" << std::endl;
 }
- 
+
 /*
  * -----------------------------------------------------------
  * 						DECONSTRUCTOR

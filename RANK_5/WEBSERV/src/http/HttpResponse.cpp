@@ -25,7 +25,6 @@ HttpResponse::HttpResponse( void ): _protocol("HTTP/1.1")
 	return;
 }
 
-
 /*==============================================================*/
 /*                        DESTRUCTORS                           */
 /*==============================================================*/
@@ -38,7 +37,6 @@ HttpResponse::~HttpResponse( void )
 {
 	return;
 }
-
 
 /*==============================================================*/
 /*                          SETTERS                             */
@@ -57,7 +55,6 @@ void	HttpResponse::setBody( const std::string& body )
 	this->_body = body;
 }
 
-
 /*
  * Function: HttpResponse::setStatusText
  * Role: Store the textual description for the current status code.
@@ -69,7 +66,6 @@ void	HttpResponse::setStatusText( const std::string& statusText )
 {
 	this->_statusText = statusText;
 }
-
 
 /*
  * Function: HttpResponse::setStatusCode
@@ -99,7 +95,6 @@ std::string	HttpResponse::getProtocol( void )
 	return (this->_protocol);
 }
 
-
 /*
  * Function: HttpResponse::getStatusCode
  * Role: Retrieve the numeric HTTP status value.
@@ -112,7 +107,6 @@ int	HttpResponse::getStatusCode( void )
 	return (this->_statusCode);
 }
 
-
 /*
  * Function: HttpResponse::getStatusText
  * Role: Retrieve the textual status string.
@@ -124,7 +118,6 @@ std::string	HttpResponse::getStatusText( void )
 {
 	return (this->_statusText);
 }
-
 
 /*
  * Function: HttpResponse::getBody

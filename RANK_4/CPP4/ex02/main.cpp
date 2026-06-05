@@ -109,13 +109,6 @@ static void	testBrainIdeas(void)
 		<< brain.getIdea(-1) << "\n";
 }
 
-// SHOULD NOT COMPILE
-// static void	testAbstractInstantiation(void)
-// {
-// 	AAnimal	*foo = new AAnimal();
-// 	(void)foo;
-// }
-
 int	main(void)
 {
 	//SHOULD NOT COMPILE

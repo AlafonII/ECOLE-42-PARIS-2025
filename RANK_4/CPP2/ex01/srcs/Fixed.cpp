@@ -50,7 +50,6 @@ Fixed::Fixed(const float f) : _rawBits(roundf(f * (1 << _fracBits))) {
 	std::cout << "Float constructor called" << std::endl;
 }
 
-
 /*
 * -----------------------------------------------------------
 * 						OPERATOR

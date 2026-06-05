@@ -23,10 +23,10 @@
 /*
  * Function: check_player
  * Role: Count directional markers to ensure exactly one player.
- * 
+ *
  * Parameters:
  *   map - Null-terminated array of map row strings.
- * 
+ *
  * Returns:
  *   SUCCESS if exactly one marker; otherwise FAILURE.
  */
@@ -61,13 +61,13 @@ static int	check_player(char **map)
 /*
  * Function: find_player_marker
  * Role: Locate player marker and return its coordinates and direction.
- * 
+ *
  * Parameters:
  *   map - Null-terminated array of map row strings.
  *   pi  - Pointer to store row index of player.
  *   pj  - Pointer to store column index of player.
  *   dir - Pointer to store direction char of player.
- * 
+ *
  * Returns:
  *   SUCCESS if marker found; otherwise FAILURE.
  */
@@ -101,7 +101,7 @@ static int	find_player_marker(char **map, int *pi, int *pj, char *dir)
 /*
  * Function: set_player_data
  * Role: Set player position and view direction in data struct.
- * 
+ *
  * Parameters:
  *   data - Pointer to t_data struct to update.
  *   i    - Row index of player.
@@ -127,11 +127,11 @@ static void	set_player_data(t_data *data, int i, int j, char dir)
 /*
  * Function: set_player_pos
  * Role: Find marker, set player coordinates and view.
- * 
+ *
  * Parameters:
  *   map  - Null-terminated array of map row strings.
  *   data - Pointer to t_data struct to update.
- * 
+ *
  * Returns:
  *   SUCCESS if position set; otherwise FAILURE.
  */
@@ -150,11 +150,11 @@ static int	set_player_pos(char **map, t_data *data)
 /*
  * Function: check_and_set_player
  * Role: Validate single player and record its position.
- * 
+ *
  * Parameters:
  *   map  - Null-terminated array of map row strings.
  *   data - Pointer to t_data struct to update.
- * 
+ *
  * Returns:
  *   SUCCESS if checks pass; otherwise FAILURE.
  */

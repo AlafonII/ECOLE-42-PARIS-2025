@@ -23,10 +23,10 @@
 /*
  * Function: rgb_to_int
  * Role: Convert RGB array to a packed integer color value.
- * 
+ *
  * Parameters:
  *   rgb - Array of three integers [R,G,B] (0-255 each).
- * 
+ *
  * Returns:
  *   Packed integer in format (R<<16)|(G<<8)|B.
  */
@@ -38,13 +38,13 @@ int	rgb_to_int(int rgb[3])
 /*
  * Function: load_single_texture
  * Role: Load XPM image into a data_texture slot in cfg.
- * 
+ *
  * Parameters:
  *   graph - Pointer to t_graphic with MLX context.
  *   cfg   - Pointer to t_data containing texture storage.
  *   path  - File path to XPM texture.
  *   idx   - Index in cfg->textures.datatex array.
- * 
+ *
  * Returns:
  *   SUCCESS if loaded; otherwise FAILURE.
  */
@@ -67,7 +67,7 @@ static int	load_single_texture(t_graphic *graph,
 /*
  * Function: load_textures
  * Role: Load all four wall textures and handle load failures.
- * 
+ *
  * Parameters:
  *   graph - Pointer to t_graphic with MLX context.
  *   cfg   - Pointer to t_data containing texture paths and storage.
@@ -101,11 +101,11 @@ void	load_textures(t_graphic *graph, t_data *cfg)
 /*
  * Function: find_texture_col
  * Role: Compute horizontal texture column for a given raycast.
- * 
+ *
  * Parameters:
  *   cfg     - Pointer to t_data with player and textures.
  *   raycast - Pointer to t_raycast with angle, dist, side impact.
- * 
+ *
  * Returns:
  *   Column index into the texture image for rendering.
  */

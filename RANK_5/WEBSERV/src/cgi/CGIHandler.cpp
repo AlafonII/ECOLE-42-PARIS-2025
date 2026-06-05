@@ -38,7 +38,6 @@ CGIHandler::CGIHandler(const std::vector<std::string>& environment,
 	return;
 }
 
-
 /*==============================================================*/
 /*                        DESTRUCTORS                           */
 /*==============================================================*/
@@ -51,7 +50,6 @@ CGIHandler::~CGIHandler(void)
 {
 	return;
 }
-
 
 /*==============================================================*/
 /*                         PUBLIC METHODS                       */
@@ -128,7 +126,7 @@ std::string CGIHandler::run(size_t maxBodySize)
 	ssize_t bytesRead;
 	bool finishedWriting = false;
 
-	size_t totalRead = 0; 
+	size_t totalRead = 0;
 
 	while (!finishedWriting)
 	{
@@ -245,7 +243,6 @@ bool	CGIHandler::isCgiRequest(const std::string& path, const RouteConfig* route)
 	return (false);
 }
 
-
 /*
  * Function: CGIHandler::buildEnvironment
  * Role: Build the set of environment variables required for CGI execution.
@@ -306,7 +303,6 @@ std::vector<std::string>	CGIHandler::buildEnvironment(HttpRequest& request,
 	return (envStrings);
 }
 
-
 /*
  * Function: CGIHandler::buildArguments
  * Role: Build the argv list for the CGI process.
@@ -329,7 +325,6 @@ std::vector<std::string>	CGIHandler::buildArguments(const RouteConfig* route,
 	return (args);
 }
 
-
 /*==============================================================*/
 /*                        PRIVATE METHODS                       */
 /*==============================================================*/
@@ -351,7 +346,6 @@ std::vector<char*>	CGIHandler::buildEnvpArray(void)
 	envp.push_back(NULL);
 	return (envp);
 }
-
 
 /*
  * Function: CGIHandler::buildArgvArray

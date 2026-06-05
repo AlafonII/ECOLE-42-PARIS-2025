@@ -47,13 +47,13 @@ class ClientConnection
 		std::string		methodDelete(void);                             // Handle DELETE requests
 		std::string		methodPut(void);                             	// Handle PUT requests
 		std::string		ok(std::ifstream& file, bool body);             // Build successful response from file
-		
+
 		std::string		error(int statusCode, std::string statusText);  // Generate generic error response
 		std::string		getHeader(void);                                // Build common response headers
 		std::string		badRequest(void);                               // 400 error helper
 		std::string		notFound(void);                                 // 404 error helper
-		std::string		noContent(void);								// 204 error helper	
-		std::string		created(void);									// 201 error helper	
+		std::string		noContent(void);								// 204 error helper
+		std::string		created(void);									// 201 error helper
 		std::string		notImplemented(void);                           // 501 error helper
 		std::string		notAllowedMethod(void);                         // 405 error helper
 		std::string		uriTooLong(void);                               // 414 error helper

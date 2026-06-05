@@ -23,7 +23,7 @@
 /*
  * Function: alloc_bfs_queue
  * Role: Allocate and initialize BFS index queues.
- * 
+ *
  * Parameters:
  *   ctx - Pointer to BFS context with capacity set.
  */
@@ -49,7 +49,7 @@ static void	alloc_bfs_queue(t_bfs *ctx)
 /*
  * Function: init_vis_matrix
  * Role: Allocate and initialize visitation matrix.
- * 
+ *
  * Parameters:
  *   ctx - Pointer to BFS context with rows, cols, and queues.
  */
@@ -80,7 +80,7 @@ static void	init_vis_matrix(t_bfs *ctx)
 /*
  * Function: init_bfs_context
  * Role: Initialize BFS context dimensions and allocate resources.
- * 
+ *
  * Parameters:
  *   ctx - Pointer to BFS context to set up.
  *   map - NULL-terminated array of map row strings.
@@ -98,7 +98,7 @@ void	init_bfs_context(t_bfs *ctx, char **map)
 /*
  * Function: free_bfs_context
  * Role: Free BFS context queues and visited matrix.
- * 
+ *
  * Parameters:
  *   ctx - Pointer to BFS context to clean up.
  */

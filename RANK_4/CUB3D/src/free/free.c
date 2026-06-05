@@ -23,7 +23,7 @@
 /*
  * Function: free_config
  * Role: Free textures, map, and config structure.
- * 
+ *
  * Parameters:
  *   cfg - Pointer to t_data; if NULL, does nothing.
  */
@@ -43,7 +43,7 @@ void	free_config(t_data *cfg)
 /*
  * Function: free_map
  * Role: Free null-terminated array of strings.
- * 
+ *
  * Parameters:
  *   map - Array of strings to free; if NULL, does nothing.
  */
@@ -65,7 +65,7 @@ void	free_map(char **map)
 /*
  * Function: cleanup_mlx
  * Role: Destroy MLX window, display and free context.
- * 
+ *
  * Parameters:
  *   graph - Pointer to t_graphic with MLX context.
  */
@@ -84,7 +84,7 @@ void	cleanup_mlx(t_graphic *graph)
 /*
  * Function: destroy_textures
  * Role: Destroy all loaded texture images in MLX.
- * 
+ *
  * Parameters:
  *   param - t_game pointer cast to void*.
  */
@@ -111,10 +111,10 @@ void	destroy_textures(void *param)
 /*
  * Function: close_window
  * Role: Clean up all resources and exit successfully.
- * 
+ *
  * Parameters:
  *   param - t_game pointer cast to void*.
- * 
+ *
  * Returns:
  *   Does not return; exits with SUCCESS.
  */

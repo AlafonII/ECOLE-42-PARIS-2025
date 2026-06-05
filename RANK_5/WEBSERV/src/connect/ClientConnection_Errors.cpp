@@ -63,7 +63,6 @@ std::string	ClientConnection::badRequest( void )
 	return (this->error(400, "Bad Request"));
 }
 
-
 /*
  * Function: ClientConnection::forbidden
  * Role: Build a 403 Forbidden response.
@@ -75,7 +74,6 @@ std::string	ClientConnection::forbidden( void )
 {
 	return (this->error(403, "Forbidden"));
 }
-
 
 /*
  * Function: ClientConnection::notFound
@@ -89,7 +87,6 @@ std::string	ClientConnection::notFound( void )
 	return (this->error(404, "Not Found"));
 }
 
-
 /*
  * Function: ClientConnection::notAllowedMethod
  * Role: Build a 405 Method Not Allowed response.
@@ -101,7 +98,6 @@ std::string	ClientConnection::notAllowedMethod( void )
 {
 	return (this->error(405, "Method Not Allowed"));
 }
-
 
 /*
  * Function: ClientConnection::uriTooLong
@@ -115,7 +111,6 @@ std::string	ClientConnection::uriTooLong( void )
 	return (this->error(414, "URI Too Long"));
 }
 
-
 /*
  * Function: ClientConnection::internalServerError
  * Role: Build a 500 Internal Server Error response.
@@ -127,7 +122,6 @@ std::string	ClientConnection::internalServerError( void )
 {
 	return (this->error(500, "Internal Server Error"));
 }
-
 
 /*
  * Function: ClientConnection::gatewayTimeout
@@ -141,7 +135,6 @@ std::string	ClientConnection::gatewayTimeout( void )
 	return (this->error(504, "Gateway Timeout"));
 }
 
-
 /*
  * Function: ClientConnection::notImplemented
  * Role: Build a 501 Not Implemented response.
@@ -153,7 +146,6 @@ std::string	ClientConnection::notImplemented( void )
 {
 	return (this->error(501, "Not Implemented"));
 }
-
 
 /*
  * Function: ClientConnection::getHeader

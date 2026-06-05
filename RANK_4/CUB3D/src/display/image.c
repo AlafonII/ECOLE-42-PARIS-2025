@@ -105,9 +105,9 @@ void	floor_drawing(t_data *cfg, t_image *img, t_raycast *raycast)
  * Role: trace the ceil portion of ray
  *
  * Parameters:
- *	cfg - structure s_data   
- *	img - structure s_image   
- *	raycast - structure s_raycasting 
+ *	cfg - structure s_data
+ *	img - structure s_image
+ *	raycast - structure s_raycasting
  */
 void	ceil_drawing(t_data *cfg, t_image *img, t_raycast *raycast)
 {
@@ -131,9 +131,9 @@ void	ceil_drawing(t_data *cfg, t_image *img, t_raycast *raycast)
  * Role: trace the wall potion of ray
  *
  * Parameters:
- *	cfg - structure s_data   
- *	img - structure s_image   
- *	raycast - structure s_raycasting 
+ *	cfg - structure s_data
+ *	img - structure s_image
+ *	raycast - structure s_raycasting
  */
 void	raytracing(t_data *cfg, t_image *img, t_raycast *raycast)
 {

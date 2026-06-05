@@ -23,7 +23,7 @@
 /*
  * Function: update_key_state
  * Role: Update game key_state array for given key and value.
- * 
+ *
  * Parameters:
  *   key   - Key code from event (e.g., XK_w, XK_Left).
  *   value - 1 for press, 0 for release.
@@ -48,7 +48,7 @@ static void	update_key_state(int key, int value, t_game *game)
 /*
  * Function: poll_keys
  * Role: Check current key_state and move or rotate player accordingly.
- * 
+ *
  * Parameters:
  *   game - Pointer to t_game containing input state and data.
  */
@@ -84,10 +84,10 @@ static void	poll_keys(t_game *game)
 /*
  * Function: game_loop
  * Role: Perform one frame: poll keys, clear window, render scene.
- * 
+ *
  * Parameters:
  *   param - Pointer to t_game passed as void*.
- * 
+ *
  * Returns:
  *   SUCCESS always.
  */
@@ -104,11 +104,11 @@ int	game_loop(void *param)
 /*
  * Function: handle_keypress
  * Role: On key press, close window on Escape or set key state.
- * 
+ *
  * Parameters:
  *   key   - Key code from event.
  *   param - Pointer to t_game passed as void*.
- * 
+ *
  * Returns:
  *   SUCCESS always.
  */
@@ -127,11 +127,11 @@ int	handle_keyprs(int key, void *param)
 /*
  * Function: handle_keyrelease
  * Role: On key release, update key state accordingly.
- * 
+ *
  * Parameters:
  *   key   - Key code from event.
  *   param - Pointer to t_game passed as void*.
- * 
+ *
  * Returns:
  *   SUCCESS always.
  */

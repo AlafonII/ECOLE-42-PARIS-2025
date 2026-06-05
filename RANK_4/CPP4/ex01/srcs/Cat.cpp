@@ -62,7 +62,7 @@ Brain	*Cat::getBrain(void) const {
 void	Cat::makeSound(void) const {
 	std::cout << this->_type << " said : Mememememowww" << std::endl;
 }
- 
+
 /*
  * -----------------------------------------------------------
  * 						DECONSTRUCTOR

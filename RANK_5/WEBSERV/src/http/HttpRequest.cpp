@@ -108,7 +108,6 @@ std::string&	HttpRequest::getMethod( void )
 	return (this->_method);
 }
 
-
 /*
  * Function: HttpRequest::getPath
  * Role: Access the decoded request path.
@@ -120,7 +119,6 @@ std::string&	HttpRequest::getPath( void )
 {
 	return (this->_path);
 }
-
 
 /*
  * Function: HttpRequest::getHeaders
@@ -156,7 +154,6 @@ std::string	HttpRequest::getMimeType(void)
 	return "text/html";
 }
 
-
 /*
  * Function: HttpRequest::getBody
  * Role: Access the parsed request body.
@@ -168,7 +165,6 @@ std::string&	HttpRequest::getBody( void )
 {
 	return (this->_body);
 }
-
 
 /*
  * Function: HttpRequest::getRequest
@@ -182,7 +178,6 @@ std::string&	HttpRequest::getRequest( void )
 	return (this->_request);
 }
 
-
 /*
  * Function: HttpRequest::getQuery
  * Role: Access the parsed query string.
@@ -194,7 +189,6 @@ std::string&	HttpRequest::getQuery( void )
 {
 	return (this->_query);
 }
-
 
 /*
  * Function: HttpRequest::getHeader
@@ -213,7 +207,6 @@ std::string	HttpRequest::getHeader(const std::string& key)
 		return std::string();
 	return it->second;
 }
-
 
 /*
  * Function: HttpRequest::getIsGoodSyntax
@@ -243,7 +236,6 @@ void	HttpRequest::setIsGoodSyntax( bool goodSyntax )
 	this->_isGoodSyntax = goodSyntax;
 }
 
-
 /*==============================================================*/
 /*                     BUFFER MANAGEMENT                        */
 /*==============================================================*/
@@ -261,7 +253,6 @@ void HttpRequest::appendToRequest(const char* data, size_t len)
 	// Grow the raw buffer with the newly read bytes.
 	this->_request.append(data, len);
 }
-
 
 /*==============================================================*/
 /*             HTTP PARSING / RESPONSE BUILDING                 */
@@ -414,7 +405,6 @@ bool HttpRequest::parse(const std::string& raw)
 	this->_isGoodSyntax = true;
 	return true;
 }
-
 
 /*
  * Function: HttpRequest::clear

@@ -21,7 +21,7 @@
 // Default: type="Weird thing", use default stats
 Animal::Animal(void) : _type("Weird thing") {
 		std::cout << "Animal default constructor called" << std::endl;
-}	
+}
 
 // type: custom type, default stats
 Animal::Animal(std::string const &type) : _type(type) {
@@ -61,7 +61,7 @@ std::string	const	&Animal::getType(void) const {
 void	Animal::makeSound(void) const {
 	std::cout << this->_type << " said : I̸̡̢̹̥̖̓̈́̊̉͊̈̂͌͑̅̇̂͝ͅ ̷̞̬͕͇̠͔̰̗͖̣̝̙͗̄̔͆͑̔̂̈́̈́̄̈́̅̃͝ͅẀ̴̲Į̴̦̘̼̭̏̅͛̒̑̆͂͝L̷̨̛̛͈͖͕̠̥͛͌̄͋̈͂̂͋͛L̷̢̡̜̥̬̗̘̦̑̾͂́́̃̕ ̶̬̳̯͕̈́̈͆͌͑̑͐͐̎̇͛̚͘̕K̷̡̛̮̦̣̫͇̙͓͈̲̍̀͒̾͑̾̐̔͑̃͛̽̚͝I̴̙͔͈̠͇̖̫̳̤̹͉͐̓̅̈́͒̒̅͜͠L̸̯̗͍͒̄̈́̉̅̆̔̀͒̚̚͝L̷̩͓̘̗̰̰͍͈̪̺͛̿̓͠ ̸̦̼̼͆͂̊ͅY̷̦̎̂̂̌́̍͂̓̀̉̂̕͠Ọ̴̧̧̥̖̤̖̬̦̼̭̤͛͆͑͆́͗̕Ȗ̸͇͓͓̟̭͇̞̤̙̙̖̲̪́́̓̅̊̃͝ͅ ̵̧̹̯̘̤͕̺̤͖͎͙̎͂̃̌̑̊͋͐͒̓͛̓̎̄I̶̟͙̦̦͔̗̱͚̘̗̺̼͊̾̉͠ͅǸ̷̘̝͍̞̫̟͚̠̤͇̜̠̜̈̀̀̊́̃͆̑̀̽̚͝͠ͅ ̵̧̡̡͔̗̟̠̳͎̺̃̊͆̌͌́̌̐͌̕̚Ỵ̵̣̿̓̊͑͌̄̊͝͝Ǒ̵̡̭͉̝̲̖͈̙̿̊͋͌̒́̓̓Û̷̡͕̲̥͕̹̩̦̦͔̹̻̀̊̎Ř̴̨̢̺̳̠̟̼̞̜̬̇ ̷̩̞̘̺̰̬̈́̈̃̂̽͆̑̃͑̾̐͛S̷͖͇͖̱̟̬̞̥̙̖͉̫̩̎͝L̷̨̢̡̦̯͙͇͉̬̏͆̈́̐͗͊̕͜ͅE̸̛̻̩̅̌͂̐̎͝͠Ȇ̶̛̤̒̊̐͊̔͋̽̑̑P̴̨̝̤̜̜͚̭̱̲̘̺͉͖̌" << std::endl;
 }
- 
+
 /*
  * -----------------------------------------------------------
  * 						DECONSTRUCTOR

@@ -23,12 +23,12 @@
 /*
  * Function: check_side_collision
  * Role: Check for side collisions using collision buffer.
- * 
+ *
  * Parameters:
  *   d  - Pointer to game data with map info.
  *   nx - Proposed new x-coordinate.
  *   ny - Proposed new y-coordinate.
- * 
+ *
  * Returns:
  *   1 if side collision detected; otherwise 0.
  */
@@ -57,12 +57,12 @@ static int	check_side_collision(t_data *d, double nx, double ny)
 /*
  * Function: check_corner_collision
  * Role: Check for corner collisions using collision buffer.
- * 
+ *
  * Parameters:
  *   d  - Pointer to game data with map info.
  *   nx - Proposed new x-coordinate.
  *   ny - Proposed new y-coordinate.
- * 
+ *
  * Returns:
  *   1 if corner collision detected; otherwise 0.
  */
@@ -95,7 +95,7 @@ static int	check_corner_collision(t_data *d, double nx, double ny)
 /*
  * Function: try_move
  * Role: Attempt to move player by dx, dy if no collisions.
- * 
+ *
  * Parameters:
  *   d  - Pointer to game data with player and map.
  *   dx - Movement delta on x axis.

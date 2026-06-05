@@ -41,7 +41,6 @@ ClientConnection::ClientConnection(int client_fd,
 	fcntl(this->_fd, F_SETFL, O_NONBLOCK);
 }
 
-
 /*==============================================================*/
 /*                        DESTRUCTORS                           */
 /*==============================================================*/
@@ -54,7 +53,6 @@ ClientConnection::~ClientConnection( void )
 {
 	return;
 }
-
 
 /*==============================================================*/
 /*                  CONNECTION MANAGEMENT                       */
@@ -120,7 +118,6 @@ bool	ClientConnection::readRequest( void )
 	return (bodyLen >= static_cast<size_t>(contentLength));
 }
 
-
 /*
  * Function: ClientConnection::resetRequest
  * Role: Clear the stored HttpRequest state after a response is sent.
@@ -131,7 +128,6 @@ void	ClientConnection::resetRequest( void )
 	this->_HttpRequest.clear();
 	return;
 }
-
 
 /*
  * Function: ClientConnection::queueResponse
@@ -147,7 +143,6 @@ void	ClientConnection::queueResponse( const std::string& response )
 	this->_bytesSent = 0;
 }
 
-
 /*
  * Function: ClientConnection::sendResponse
  * Role: Flush the queued HTTP response to the client in a non-blocking manner.
@@ -156,7 +151,7 @@ int	ClientConnection::sendResponse()
 {
 	if (this->_responseBuffer.empty())
 		return (0);
-	
+
 	// Attempt to send the remaining portion of the response buffer
 	ssize_t	sent = write(this->_fd,
 					this->_responseBuffer.c_str() + this->_bytesSent,
@@ -177,7 +172,6 @@ int	ClientConnection::sendResponse()
 	return (0);
 }
 
-
 /*
  * Function: ClientConnection::closeConnection
  * Role: Close the client socket and mark the connection as terminated.
@@ -190,7 +184,6 @@ void	ClientConnection::closeConnection(void)
 		this->_closed = true;
 	}
 }
-
 
 /*==============================================================*/
 /*                        STATE QUERIES                         */
@@ -208,7 +201,6 @@ bool	ClientConnection::hasResponseReady( void ) const
 	return (!this->_responseBuffer.empty());
 }
 
-
 /*
  * Function: ClientConnection::isClosed
  * Role: Report whether the underlying socket has been closed.
@@ -221,7 +213,6 @@ bool	ClientConnection::isClosed(void)
 	return (this->_closed);
 }
 
-
 /*
  * Function: ClientConnection::shouldClose
  * Role: Determine keep-alive policy for the current connection.
@@ -233,7 +224,6 @@ bool	ClientConnection::shouldClose(void)
 {
 	return (!this->_keepAlive);
 }
-
 
 /*==============================================================*/
 /*               HTTP RESPONSE BUILDING                         */

@@ -23,10 +23,10 @@
 /*
  * Function: trim_spaces
  * Role: Remove leading and trailing whitespace in place.
- * 
+ *
  * Parameters:
  *   s - String to trim.
- * 
+ *
  * Returns:
  *   Pointer to first non-space character.
  */
@@ -50,11 +50,11 @@ char	*trim_spaces(char *s)
 /*
  * Function: process_header_line
  * Role: Parse one header line for textures or colors.
- * 
+ *
  * Parameters:
  *   trim     - Trimmed header line.
  *   textures - Textures struct to populate.
- * 
+ *
  * Returns:
  *   SUCCESS if parsed; otherwise FAILURE.
  */
@@ -83,12 +83,12 @@ static int	process_header_line(char *trim, t_textures *textures)
 /*
  * Function: process_header_block
  * Role: Read six non-empty header lines and fetch next line.
- * 
+ *
  * Parameters:
  *   fd        - File descriptor of .cub file.
  *   textures  - Textures struct to populate.
  *   nxt_line  - Output pointer for next unread line.
- * 
+ *
  * Returns:
  *   SUCCESS if six headers parsed; otherwise FAILURE.
  */
@@ -123,11 +123,11 @@ static int	process_header_block(int fd, t_textures *textures, char **nxt_line)
 /*
  * Function: parse_headers
  * Role: Validate header block and ensure no extra header lines.
- * 
+ *
  * Parameters:
  *   fd        - File descriptor of .cub file.
  *   textures  - Textures struct to populate.
- * 
+ *
  * Returns:
  *   SUCCESS if headers valid; otherwise FAILURE.
  */
@@ -160,10 +160,10 @@ static int	parse_headers(int fd, t_textures *textures)
 /*
  * Function: parse_cub_file
  * Role: Open .cub file, parse headers, textures, and map into data.
- * 
+ *
  * Parameters:
  *   path - Path to .cub configuration file.
- * 
+ *
  * Returns:
  *   Pointer to t_data with parsed map and textures; exits on error.
  */

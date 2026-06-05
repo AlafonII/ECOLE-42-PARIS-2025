@@ -29,7 +29,6 @@ public:
 
 	FragTrap &	operator=(FragTrap const & src);	// copy assignment
 
-
 	void	highFivesGuys(void);					 // special action: request high fives
 };
 

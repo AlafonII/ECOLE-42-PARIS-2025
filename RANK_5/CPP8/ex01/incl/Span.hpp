@@ -27,7 +27,7 @@ public:
 	void addRange(InputIt first, InputIt last) {
 		std::size_t dist = 0;
 		InputIt it = first;
-		while (it != last) { 
+		while (it != last) {
 			++dist;
 			++it;
 		}

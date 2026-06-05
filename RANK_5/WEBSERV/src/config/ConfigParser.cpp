@@ -12,7 +12,6 @@ ConfigParser::ConfigParser(void) {
 	// Nothing to initialize until a configuration file is loaded.
 }
 
-
 /*==============================================================*/
 /*                       PRIVATE HELPERS                        */
 /*==============================================================*/
@@ -35,7 +34,6 @@ std::string ConfigParser::trim(const std::string& s) {
 	return s.substr(b, e - b + 1);
 }
 
-
 /*
  * Function: ConfigParser::stripValue
  * Role: Clean directive strings by removing whitespace and trailing separators.
@@ -55,7 +53,6 @@ std::string ConfigParser::stripValue(const std::string& s) {
 	}
 	return out;
 }
-
 
 /*==============================================================*/
 /*                   CONFIG BLOCK PARSING                       */
@@ -171,7 +168,6 @@ void ConfigParser::parseServerBlock(const std::string& block) {
 	_servers.push_back(cfg);
 }
 
-
 /*
  * Function: ConfigParser::parseRouteBlock
  * Role: Parse directives inside a location block and append the route to the server.
@@ -249,7 +245,6 @@ void ConfigParser::parseRouteBlock(ServerConfig& srv, RouteConfig& route, const 
 	srv.routes.push_back(route);
 }
 
-
 /*==============================================================*/
 /*                        CONFIG LOADING                        */
 /*==============================================================*/
@@ -276,7 +271,6 @@ bool ConfigParser::loadFile(const std::string& path) {
 	this->_content = ss.str();
 	return true;
 }
-
 
 /*==============================================================*/
 /*                        CONFIG PARSING                        */
@@ -314,7 +308,6 @@ bool ConfigParser::parse(void) {
 	}
 	return !_servers.empty();
 }
-
 
 /*==============================================================*/
 /*                            GETTERS                           */

@@ -65,7 +65,6 @@ void Weapon::setType(const std::string &t) {
 	type = t;
 }
 
-
 /*
  * Function: getType
  * -----------------
@@ -74,6 +73,6 @@ void Weapon::setType(const std::string &t) {
  * Returns:
  *   A const reference to the internal 'type' string.
  */
-const std::string& Weapon::getType() const { 
+const std::string& Weapon::getType() const {
 	return type;
 }

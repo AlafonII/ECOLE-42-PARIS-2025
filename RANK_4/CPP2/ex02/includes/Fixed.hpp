@@ -47,7 +47,6 @@ public:
 	Fixed				operator*(const Fixed &rhs) const;			// multiply fixed-point values
 	Fixed				operator/(const Fixed &rhs) const;			// divide fixed-point values
 
-	
 	int					getRawBits(void) const;						// return internal raw bits
 	void				setRawBits(int const raw);					// set internal raw bits
 	float 				toFloat(void) const;						// converts to float

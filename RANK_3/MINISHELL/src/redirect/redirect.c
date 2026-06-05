@@ -37,7 +37,7 @@ static void	check_next_token(t_cmd_line *cmd_line, int i, int j)
 *	- manage cmd < file command type
 *	- open file with O_RDONLY flag
 *	- shift command when "< file cmd" syntax
-*	- replace stdin by file descriptor 
+*	- replace stdin by file descriptor
 */
 void	in_redir(t_cmd_line *cmd_line, t_cmd_meta *cmd_meta, int i, int j)
 {
@@ -59,7 +59,7 @@ void	in_redir(t_cmd_line *cmd_line, t_cmd_meta *cmd_meta, int i, int j)
 * out_redir function :
 *	- manage cmd > file command type
 *	- create file with O_TRUNC flag
-*	- replace stdout by file descriptor 
+*	- replace stdout by file descriptor
 */
 void	out_redir(t_cmd_line *cmd_line, t_cmd_meta *cmd_meta, int i, int j)
 {
@@ -82,7 +82,7 @@ void	out_redir(t_cmd_line *cmd_line, t_cmd_meta *cmd_meta, int i, int j)
 * out_append_redir function :
 *	- manage cmd >> file command type
 *	- create file with O_APPEND flag
-*	- replace stdout by file descriptor 
+*	- replace stdout by file descriptor
 */
 void	out_append_redir(t_cmd_line *cmd_line,
 	t_cmd_meta *cmd_meta, int i, int j)

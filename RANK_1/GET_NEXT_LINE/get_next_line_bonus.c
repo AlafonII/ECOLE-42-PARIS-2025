@@ -90,21 +90,3 @@ char	*get_next_line(int fd)
 		return (free(line), NULL);
 	return (line);
 }
-
-// int	main(void)
-// {
-// 	int		fd = open("get_next_line.h", O_RDONLY);
-// 	char	*line;
-// 	int		i;
-
-// 	i = 0;
-// 	while (i < 10)
-// 	{
-// 		line = get_next_line(fd);
-// 		printf("%s %d", line, BUFFER_SIZE);
-// 		free(line);
-// 		i++;
-// 	}
-// 	close(fd);
-// 	return (0);
-// }

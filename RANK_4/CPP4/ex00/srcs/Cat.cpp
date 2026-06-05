@@ -47,7 +47,7 @@ Cat	&Cat::operator=(Cat const & src) {
 void	Cat::makeSound(void) const {
 	std::cout << this->_type << " said : Mememememowww" << std::endl;
 }
- 
+
 /*
  * -----------------------------------------------------------
  * 						DECONSTRUCTOR

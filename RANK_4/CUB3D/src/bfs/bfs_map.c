@@ -23,12 +23,12 @@
 /*
  * Function: find_player
  * Role: Locate unique player marker and record its indices.
- * 
+ *
  * Parameters:
  *   map - NULL-terminated array of map row strings.
  *   si  - Pointer to store found row index.
  *   sj  - Pointer to store found column index.
- * 
+ *
  * Returns:
  *   1 if exactly one marker found; otherwise 0.
  */
@@ -62,10 +62,10 @@ int	find_player(char **map, int *si, int *sj)
 /*
  * Function: map_rows
  * Role: Count number of rows in a NULL-terminated map array.
- * 
+ *
  * Parameters:
  *   map - NULL-terminated array of map row strings.
- * 
+ *
  * Returns:
  *   Number of rows.
  */
@@ -82,10 +82,10 @@ int	map_rows(char **map)
 /*
  * Function: get_max_cols
  * Role: Determine the maximum row length in the map array.
- * 
+ *
  * Parameters:
  *   map - NULL-terminated array of map row strings.
- * 
+ *
  * Returns:
  *   Maximum string length among all rows.
  */

@@ -63,7 +63,7 @@ int	key_action(int keycode, void *graph)
 }
 
 /*
- * Function: image_initializing 
+ * Function: image_initializing
  * Role: alloc memory for image
  *
  * Parameters:

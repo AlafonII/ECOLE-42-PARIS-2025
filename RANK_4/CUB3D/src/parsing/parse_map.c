@@ -23,12 +23,12 @@
 /*
  * Function: add_line
  * Role: Append a trimmed line to the array, reallocating as needed.
- * 
+ *
  * Parameters:
  *   lines - Existing array of map row strings.
  *   count - Number of rows currently in lines.
  *   trim  - Trimmed line to append.
- * 
+ *
  * Returns:
  *   New array with the appended line; exits on memory error.
  */
@@ -60,11 +60,11 @@ static char	**add_line(char **lines, int count, char *trim)
 /*
  * Function: handle_map_row
  * Role: Validate a trimmed line and append it to info->file.
- * 
+ *
  * Parameters:
  *   info - Map info struct tracking file, counts, and flags.
  *   trim - Trimmed line string to process.
- * 
+ *
  * Returns:
  *   SUCCESS if line appended; otherwise FAILURE.
  */
@@ -83,11 +83,11 @@ static int	handle_map_row(t_mapinfo *info, char *trim)
 /*
  * Function: cleanup_failure
  * Role: Free raw line and allocated file on error.
- * 
+ *
  * Parameters:
  *   info - Map info struct containing file pointer.
  *   raw  - Raw line string to free.
- * 
+ *
  * Returns:
  *   FAILURE always.
  */
@@ -102,11 +102,11 @@ static int	cleanup_failure(t_mapinfo *info, char *raw)
 /*
  * Function: process_map_line
  * Role: Trim raw input, handle map row or set blank flag.
- * 
+ *
  * Parameters:
  *   info - Map info struct tracking parse state.
  *   raw  - Raw line string from file.
- * 
+ *
  * Returns:
  *   SUCCESS if processed; FAILURE on invalid map row.
  */
@@ -128,10 +128,10 @@ static int	process_map_line(t_mapinfo *info, char *raw)
 /*
  * Function: parse_map_lines
  * Role: Read lines, process map, set info->height, handle errors.
- * 
+ *
  * Parameters:
  *   info - Map info struct with fd and storage fields.
- * 
+ *
  * Returns:
  *   SUCCESS if at least one row parsed; FAILURE on error or empty map.
  */

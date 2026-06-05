@@ -36,7 +36,6 @@ ConnectionManager::ConnectionManager(const std::vector<ServerSocket*>& servers)
 	          << " listening sockets." << std::endl;
 }
 
-
 /*==============================================================*/
 /*                        DESTRUCTORS                           */
 /*==============================================================*/
@@ -51,7 +50,6 @@ ConnectionManager::~ConnectionManager(void)
 		 it != _clients.end(); ++it)
 		delete it->second;
 }
-
 
 /*==============================================================*/
 /*                POLL LOOP / EVENT HANDLING                    */
@@ -164,7 +162,7 @@ void	ConnectionManager::run(void)
 				if (client->hasResponseReady())
 				{
 					// Send as much of the queued response as the socket accepts.
-					
+
 					if (client->sendResponse() || client->shouldClose())
 					{
 						client->closeConnection();

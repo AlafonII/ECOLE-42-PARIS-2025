@@ -35,7 +35,6 @@ Fixed::Fixed(const Fixed &obj) : _rawBits(obj.getRawBits()) {
 	std::cout << "Copy constructor called" << std::endl;
 }
 
-
 /*
 * -----------------------------------------------------------
 * 						OPERATOR

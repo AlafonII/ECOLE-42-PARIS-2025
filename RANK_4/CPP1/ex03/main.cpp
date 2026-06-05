@@ -26,7 +26,6 @@
  * ---------------------------------------------------------------
  */
 
-
 /*
  * Function: main
  * --------------
@@ -64,39 +63,3 @@ int	main(void)
 
 	return (0);
 }
-
-// int main( void )
-// {
-// 	Weapon	knife = Weapon( "spoon" );
-// 	Weapon	club = Weapon( "fart gun" );
-// 	Weapon	flamethrower = Weapon( "nuclear bomb" );
-// 	Weapon	fists = Weapon( "fists" );
-
-// 	std::cout << "\n* WELCOME TO THE ARENA! *\n" << std::endl;
-
-// 	HumanA	robert( "robert", club  );
-// 	HumanB	michael( "michael" );
-
-// 	std::cout << "\n* 3, 2, 1, 0.5, 0.25, 0.1, 0.01... FIGHT! *\n" << std::endl;
-	
-// 	robert.attack();
-// 	michael.attack();
-
-// 	michael.setWeapon( knife );
-// 	club.setType("elbow");
-// 	robert.attack();
-// 	michael.attack();
-
-// 	michael.setWeapon( fists );
-// 	club.setType("toenail");
-// 	robert.attack();
-// 	michael.attack();
-
-// 	michael.setWeapon( flamethrower );
-// 	michael.attack();
-// 	club.setType( "fork" );
-// 	robert.attack();
-
-// 	std::cout << std::endl;
-// 	return ( 0 );
-// }

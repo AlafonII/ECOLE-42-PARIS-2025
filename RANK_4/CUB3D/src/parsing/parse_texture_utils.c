@@ -23,10 +23,10 @@
 /*
  * Function: get_dirname
  * Role: Extract directory part of a file path.
- * 
+ *
  * Parameters:
  *   path - Null-terminated file path string.
- * 
+ *
  * Returns:
  *   Allocated string with directory name; exits on memory error.
  */
@@ -50,10 +50,10 @@ static char	*get_dirname(const char *path)
 /*
  * Function: check_texture_directory
  * Role: Verify that a path exists and is a directory.
- * 
+ *
  * Parameters:
  *   dir_path - Path to directory to check.
- * 
+ *
  * Returns:
  *   SUCCESS if dir_path is a directory; exits on error.
  */
@@ -69,10 +69,10 @@ int	check_texture_directory(const char *dir_path)
 /*
  * Function: check_xpm_extension
  * Role: Ensure file path ends with ".xpm" extension.
- * 
+ *
  * Parameters:
  *   file_path - Null-terminated file path string.
- * 
+ *
  * Returns:
  *   SUCCESS if extension is valid; exits on error.
  */
@@ -89,10 +89,10 @@ int	check_xpm_extension(const char *file_path)
 /*
  * Function: validate_all_textures
  * Role: Validate texture paths by checking directory and extensions.
- * 
+ *
  * Parameters:
  *   textures - Pointer to t_textures struct with file paths.
- * 
+ *
  * Returns:
  *   SUCCESS if all textures valid; exits on error.
  */

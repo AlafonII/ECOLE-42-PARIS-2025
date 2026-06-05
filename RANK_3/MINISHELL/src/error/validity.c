@@ -52,7 +52,7 @@ static void	exist(char *cmde)
 /*
 * check_command_validity
 *	- check the status of the command
-*	- if necessary exit with corresponding exit value 
+*	- if necessary exit with corresponding exit value
 *	- else do nothing
 */
 void	check_command_validity(char *cmde)

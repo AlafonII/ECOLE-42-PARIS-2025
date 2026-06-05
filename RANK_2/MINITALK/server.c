@@ -48,27 +48,6 @@ static void	handle_signal(int sig, siginfo_t *info, void *context)
 	usleep(100);
 }
 
-// static void	handle_signal(int sig, siginfo_t *info, void *context)
-// {
-// 	static unsigned char	c;
-// 	static int				bits;
-// 	(void)context;
-// 	if (sig == SIGUSR1)
-// 		c |= (1 << bits);
-// 	bits++;
-// 	if (bits == 8)
-// 	{
-// 		if (c == '\0')
-// 			write(1, "\n", 1);
-// 		else
-// 			write(1, &c, 1);
-// 		c = 0;
-// 		bits = 0;
-// 	}
-// 	kill(info->si_pid, SIGUSR1);
-// 	usleep(100);
-// }
-
 int	main(void)
 {
 	struct sigaction	sa;

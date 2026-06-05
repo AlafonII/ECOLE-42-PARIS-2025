@@ -142,7 +142,7 @@ std::string	ClientConnection::methodGet( bool body )
 		parseCgiResponse(output, this->_HttpResponse);
 		return (this->getHeader() + this->_HttpResponse.getBody());
 	}
-	else 
+	else
 		return (this->ok(file, body));
 }
 
@@ -244,7 +244,6 @@ std::string	ClientConnection::methodPost( void )
 		return (this->ok(file, true));
 }
 
-
 /*
  * Function: ClientConnection::methodDelete
  * Role: Remove a resource from disk if permissions allow.
@@ -324,8 +323,6 @@ std::string	ClientConnection::methodPut(void)
 	}
 }
 
-
-
 /*
  * Function: ClientConnection::ok
  * Role: Build a 200 OK response streaming the provided file if needed.
@@ -340,7 +337,7 @@ std::string	ClientConnection::methodPut(void)
 std::string	ClientConnection::ok( std::ifstream& file, bool body)
 {
 	std::stringstream	ss;
-	
+
 	// Read the entire file into memory so headers can reference its size.
 	ss << file.rdbuf();
 	this->_HttpResponse.setStatusCode(200);
@@ -351,7 +348,6 @@ std::string	ClientConnection::ok( std::ifstream& file, bool body)
 	else
 		return (this->getHeader());
 }
-
 
 /*
  * Function: ClientConnection::noContent
@@ -366,7 +362,6 @@ std::string	ClientConnection::noContent(void)
 	this->_HttpResponse.setStatusText("No Content");
 	return (this->getHeader());
 }
-
 
 /*
  * Function: ClientConnection::created

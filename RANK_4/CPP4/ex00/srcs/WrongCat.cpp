@@ -12,7 +12,6 @@
 
 #include "../includes/WrongCat.hpp"
 
-
 /*
  * -----------------------------------------------------------
  * 						CONSTRUCTOR
@@ -48,7 +47,7 @@ WrongCat	&WrongCat::operator=(WrongCat const & src) {
 void	WrongCat::makeSound(void) const {
 	std::cout << this->_type << " said : wwwomemememeM" << std::endl;
 }
- 
+
 /*
  * -----------------------------------------------------------
  * 						DECONSTRUCTOR

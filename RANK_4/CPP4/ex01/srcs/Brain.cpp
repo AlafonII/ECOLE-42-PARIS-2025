@@ -21,7 +21,7 @@
 // Default: use default stats
 Brain::Brain(void) {
 		std::cout << "Brain default constructor called" << std::endl;
-}	
+}
 
 // Copy: use assignment operator to clone all fields
 Brain::Brain(Brain const &src) {

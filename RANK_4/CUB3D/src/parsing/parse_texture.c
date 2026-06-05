@@ -23,7 +23,7 @@
 /*
  * Function: parse_texture_line
  * Role: Parse a texture header line and set the destination path.
- * 
+ *
  * Parameters:
  *   line - Raw header line string.
  *   id   - Expected texture identifier ("NO","SO","WE","EA").
@@ -49,7 +49,7 @@ static int	parse_texture_line(char *line, const char *id, char **dst)
 /*
  * Function: check_and_parse
  * Role: Prevent duplicate texture ID then parse texture line.
- * 
+ *
  * Parameters:
  *   trim  - Trimmed header line string.
  *   key   - Expected texture ID string.
@@ -67,7 +67,7 @@ static int	check_and_parse(const char *trim, char *key, char **field)
 /*
  * Function: parse_texture_headers
  * Role: Identify texture header and parse its path.
- * 
+ *
  * Parameters:
  *   trim     - Trimmed header line starting with ID.
  *   textures - Pointer to t_textures struct to populate.
