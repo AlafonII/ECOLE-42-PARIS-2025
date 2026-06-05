@@ -1,0 +1,19 @@
+# Build artifacts (this repo archives source only)
+*.o
+*.a
+*.so
+*.out
+a.out
+*.gch
+
+# C/C++ executables produced by the Makefiles
+# (binaries are intentionally not committed; build from source)
+
+# Node / FT_TRANSCENDENCE
+node_modules/
+dist/
+.env
+
+# Editor / OS
+.DS_Store
+*.swp

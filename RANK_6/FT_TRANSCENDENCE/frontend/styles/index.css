@@ -1,0 +1,336 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Basic theme */
+  --player-1: #ff5252;
+  --player-2: #448aff;
+  --page-bg: #1a1a1a;
+  --btn-color: var(--page-bg);
+  --game-yellow: #ffeb3b;
+
+  /* Different color */
+  --easy-color: #10ec02;
+  --medium-color: #ecb802;
+  --hard-color: #ec0202;
+
+  /* Font families */
+  --font-title: "title_font";
+  --font-body: "body_font";
+  --font-header: "header_font";
+  --font-hover: "hover_font";
+
+  /* Font sizes */
+  --font-size-title: 40px;
+  --font-size-body: 20px;
+  --font-size-header: 54px;
+
+  /* Font colors */
+  --color-title: #d8d8d8;
+  --color-body: #ffffff;
+  --color-header: #525252;
+  --pixel-outline: #d8d8d8;
+  --pixel-fill: #0b0b0b;
+
+  /* Legacy alias used in markup */
+  --fg: var(--color-body);
+}
+
+@font-face {
+  font-family: "title_font";
+  src: url("../src/assets/fonts/ka1.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "body_font";
+  src: url("../src/assets/fonts/body_font.otf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "header_font";
+  src: url("../src/assets/fonts/header_font.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "hover_font";
+  src: url("../src/assets/fonts/hover_font.ttf") format("truetype");
+  font-display: swap;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.5;
+    transform: scale(0.99);
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--color-body);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body.page-scroll {
+  align-items: flex-start;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 2.5rem 0;
+  direction: rtl;
+}
+
+body.page-scroll .page-shell {
+  direction: ltr;
+}
+
+.page-shell {
+  padding-bottom: 5rem; /* space for fixed nav */
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.title-font {
+  font-family: var(--font-title);
+  font-size: var(--font-size-title);
+  color: var(--color-title);
+}
+
+.header-font {
+  font-family: var(--font-header);
+  font-size: var(--font-size-header);
+  color: var(--color-header);
+}
+
+.header-font-sm {
+  font-family: var(--font-header);
+  font-size: 22px;
+  color: var(--color-body);
+}
+
+.profile-username {
+  font-family: var(--font-header);
+  font-size: 28px;
+}
+
+.retro-btn {
+  position: relative;
+  isolation: isolate;
+  z-index: 0;
+  --pixel-size: 3px;
+  --pixel-double: calc(var(--pixel-size) * 2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.3rem 1.1rem;
+  background: transparent;
+  color: var(--color-body);
+  border: none;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+}
+
+.retro-btn:hover {
+  color: var(--game-yellow);
+  --pixel-outline: var(--game-yellow);
+}
+
+.retro-btn--lg {
+  padding: 0.6rem 1.35rem;
+  font-size: 1.05rem;
+}
+
+.retro-btn--easy,
+.retro-btn--medium,
+.retro-btn--hard {
+  --pixel-outline: currentColor;
+}
+
+.retro-btn--easy {
+  color: var(--easy-color);
+}
+
+.retro-btn--medium {
+  color: var(--medium-color);
+}
+
+.retro-btn--hard {
+  color: var(--hard-color);
+}
+
+.pixel-frame {
+  position: relative;
+  isolation: isolate;
+  z-index: 0;
+  --pixel-size: 3px;
+  --pixel-double: calc(var(--pixel-size) * 2);
+  --pixel-outline: #ffffff;
+  --pixel-fill: #000000;
+  color: var(--color-body);
+}
+
+.pixel-frame--clear {
+  --pixel-fill: var(--page-bg);
+}
+
+.retro-btn::before,
+.retro-btn::after,
+.pixel-frame::before,
+.pixel-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(
+    var(--pixel-double) 0,
+    calc(100% - var(--pixel-double)) 0,
+    calc(100% - var(--pixel-double)) var(--pixel-size),
+    calc(100% - var(--pixel-size)) var(--pixel-size),
+    calc(100% - var(--pixel-size)) var(--pixel-double),
+    100% var(--pixel-double),
+    100% calc(100% - var(--pixel-double)),
+    calc(100% - var(--pixel-size)) calc(100% - var(--pixel-double)),
+    calc(100% - var(--pixel-size)) calc(100% - var(--pixel-size)),
+    calc(100% - var(--pixel-double)) calc(100% - var(--pixel-size)),
+    calc(100% - var(--pixel-double)) 100%,
+    var(--pixel-double) 100%,
+    var(--pixel-double) calc(100% - var(--pixel-size)),
+    var(--pixel-size) calc(100% - var(--pixel-size)),
+    var(--pixel-size) calc(100% - var(--pixel-double)),
+    0 calc(100% - var(--pixel-double)),
+    0 var(--pixel-double),
+    var(--pixel-size) var(--pixel-double),
+    var(--pixel-size) var(--pixel-size),
+    var(--pixel-double) var(--pixel-size)
+  );
+  pointer-events: none;
+}
+
+.retro-btn::before,
+.pixel-frame::before {
+  background: var(--pixel-outline);
+  z-index: -2;
+}
+
+.retro-btn::after {
+  inset: var(--pixel-size);
+  background: var(--btn-color);
+  z-index: -1;
+}
+
+.pixel-frame::after {
+  inset: var(--pixel-size);
+  background: var(--pixel-fill);
+  z-index: -1;
+}
+
+.retro-link {
+  display: inline-block;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.retro-link:hover {
+  text-decoration: underline;
+}
+
+/* Username picker slots */
+.username-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  color: var(--color-body);
+}
+
+.username-slot.active {
+  border-color: var(--game-yellow);
+  color: var(--game-yellow);
+}
+
+.username-picker--compact .username-slot {
+  width: 64px;
+  height: 64px;
+  font-size: 40px;
+}
+
+.username-up,
+.username-down {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.username-up::before,
+.username-up::after,
+.username-down::before,
+.username-down::after {
+  display: none;
+}
+
+.nav-hover {
+  text-transform: uppercase;
+}
+
+.nav-hover:hover {
+  color: var(--game-yellow);
+  text-decoration: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tab-inactive {
+  @apply opacity-45;
+}
+
+/* Custom retro scrollbar */
+.retro-scroll {
+  overflow-y: overlay !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pixel-outline, #d8d8d8) transparent;
+}
+
+.retro-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.retro-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.retro-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-header, #525252);
+  border-radius: 4px;
+}
+
+.retro-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--game-yellow);
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_PATH=/app/src/data/transcendence.db
+    env_file: "backend/.env"
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/uploads:/app/uploads
+    restart: unless-stopped
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "5173:5173"
+    restart: unless-stopped
+volumes:
+  backend_node_modules:

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Simple PHP Form</title>
+</head>
+<body>
+	<h1>Form to test GET method</h1>
+	<form action="getResponse.php" method="get">
+		<div>
+			<input type="text" id="name" name="participant_name" />
+			<label for="name">Name</label>
+		<div>
+		<input type="submit" value="Submit">
+	</form>
+	<h1>Form to test POST method</h1>
+	<form action="postResponse.php" method="post">
+		<div>
+			<input type="text" id="name" name="participant_name" />
+			<label for="name">Name</label>
+		<div>
+		<input type="submit" value="Submit">
+	</form>
+	<div>
+	<h1>See PHP infos</h1>
+	<p><a href="php_infos.php">PHP infos</a></p>
+	<p><a href="php_error.php">PHP error</a></p>
+	<p><a href="infinite_loop.php">PHP infinite loop</a></p>
+	</div>
+</body>
+</html>

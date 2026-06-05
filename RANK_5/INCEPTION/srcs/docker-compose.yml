@@ -1,0 +1,98 @@
+# ---------------------------------------------------------------
+#  Docker Compose Configuration
+#  This file defines the multi-container setup for WordPress,
+#  MariaDB, and Nginx, connected through a shared Docker network
+# ---------------------------------------------------------------
+
+name: 'wp'
+
+services:
+  # ---------------------------------------------------------------
+  #  MariaDB Service
+  # ---------------------------------------------------------------
+  # - Provides the database backend for WordPress
+  # - Stores persistent data in a bound volume
+  mariadb:
+    container_name: mariadb
+    build: ./requirements/mariadb
+    image: mariadb
+    expose:
+      - "3306"                     # Expose internal database port
+    env_file:
+      - .env                       # Load database credentials and settings
+    volumes:
+      - database:/var/lib/mysql    # Persist MySQL data locally
+    networks:
+      - inception-network           # Connect to shared bridge network
+    restart: always                 # Automatically restart on failure
+
+  # ---------------------------------------------------------------
+  #  WordPress / PHP-FPM Service
+  # ---------------------------------------------------------------
+  # - Runs WordPress using PHP-FPM
+  # - Communicates with MariaDB internally
+  wordpress:
+    container_name: wordpress
+    build: ./requirements/wordpress
+    image: wordpress
+    depends_on:
+      - mariadb                    # Wait for MariaDB to start first
+    expose:
+      - "9000"                     # Expose FastCGI port for Nginx
+    env_file:
+      - .env                       # Load WordPress environment variables
+    volumes:
+      - website:/var/www/html      # Persist WordPress files locally
+    networks:
+      - inception-network
+    restart: always
+
+  # ---------------------------------------------------------------
+  #  Nginx Service
+  # ---------------------------------------------------------------
+  # - Acts as a reverse proxy and HTTPS front-end for WordPress
+  # - Uses SSL and connects to the PHP-FPM container internally
+  nginx:
+    container_name: nginx
+    build: ./requirements/nginx/
+    image: nginx
+    depends_on:
+      - wordpress                  # Start only after WordPress is ready
+    env_file:
+      - .env
+    ports:
+      - "443:443"                  # Expose HTTPS port to host
+    volumes:
+      - website:/var/www/html      # Share WordPress files with Nginx
+    networks:
+      - inception-network
+    restart: always
+
+# ---------------------------------------------------------------
+#  Network Configuration
+# ---------------------------------------------------------------
+# - Defines a bridge network connecting all services together
+networks:
+  inception-network:
+    name: inception-network
+    driver: bridge
+
+# ---------------------------------------------------------------
+#  Volume Configuration
+# ---------------------------------------------------------------
+# - Binds local directories to persist data and WordPress files
+volumes:
+  database:                     # Name of the volume
+    driver: local               # Use Docker's local driver
+    driver_opts:                # Extra options to configure how the volume is created
+      type: none                # 'none' means we’re not using a special filesystem or NFS
+      device: /home/alafon/data/database
+      o: bind                   # Mount type 'bind' tells Docker to link (bind-mount) this exact host directory into the container
+
+
+  website:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/alafon/data/website
+      o: bind

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",							// Use modern JavaScript features
+    "useDefineForClassFields": true,			// Aligns with modern JS class field behavior
+    "module": "ESNext",							// Use ES modules
+    "moduleResolution": "Bundler",				// Let Vite handle module resolution
+    "strict": true,								// Enable all strict TypeScript checks
+    "esModuleInterop": true,					// Improves compatibility with CommonJS modules
+    "forceConsistentCasingInFileNames": true,	// Prevents case-sensitive import issues
+    "skipLibCheck": true,						// Skip type checking in node_modules
+    "isolatedModules": true,					// Required for Vite + TS
+    "noEmit": true								// Don’t output JS; Vite handles bundling
+  },
+
+  // Files included in the TypeScript project
+  "include": ["src", "index.html"]
+}

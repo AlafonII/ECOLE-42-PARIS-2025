@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Database files
+data/*.db
+data/*.db-journal
+data/*.db-shm
+data/*.db-wal
+
+# Build output
+dist/
+build/
+*.js
+*.js.map
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,6 @@
+.env
+srcs/.env
+srcs/.env.local
+srcs/.env.*
+!srcs/.env.sample
+data/
