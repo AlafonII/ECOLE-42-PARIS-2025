@@ -96,18 +96,3 @@ ft_transcendence.
 | [FT_TRANSCENDENCE](RANK_6/FT_TRANSCENDENCE) | TypeScript | Full-stack real-time Pong web app (Fastify + SQLite + WebSockets, Dockerised). *Group project.* |
 
 ---
-
-## Notes on this archive
-
-- **Source only.** Compiled artifacts and prebuilt third-party binaries (object
-  files, static libs, the push_swap checker, the webserv testers, …) were pruned;
-  build everything from source with each project's `Makefile`. See `.gitignore`.
-- **Light cleanup only.** Code was tidied for readability (trailing whitespace,
-  stray blank lines, dead commented-out blocks) without changing any logic,
-  names, or behaviour. C projects follow the 42 Norm; third-party libraries
-  (e.g. MiniLibX) were left untouched.
-- **Constraints are 2025-era.** Each project README reflects the subject rules
-  (allowed/forbidden functions, performance targets) as defined in the 2024–2025
-  version of the cursus.
-- `MY_SCHOOL_PROJECTS` is the original source-of-truth list (rank → project →
-  origin repo) this archive was built from.
