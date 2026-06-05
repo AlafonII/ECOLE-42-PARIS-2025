@@ -1,4 +1,57 @@
-# Transcendence Project
+# ft_transcendence
+
+> Rank 06 · École 42 Common Core — *Final project: a full-stack real-time web app* (group project)
+
+## What it does
+ft_transcendence is the capstone of the Common Core: a **single-page web
+application** centred on the game of **Pong**. Players register, log in, play Pong
+against another human (locally or **remotely over WebSocket**) or against an
+**AI**, enter **tournaments**, **chat** live, and track their stats on
+**dashboards** — the whole thing shipped as a Dockerised stack started with one
+command.
+
+## How it works
+- **Frontend** — a custom **TypeScript + Tailwind CSS** SPA (no heavyweight UI
+  framework) with its own `history` router; pages live in `frontend/src/pages`
+  and talk to the backend through a thin `ApiService`.
+- **Backend** — **Node.js + Fastify (TypeScript)** exposing a REST API plus
+  WebSocket endpoints, in `backend/src` (routes, game engine, chat gateway,
+  presence). Pong physics run server-side and broadcast snapshots to clients.
+- **Database** — **SQLite** via `better-sqlite3`, with a schema and parameterised
+  queries (`backend/src/database`).
+- **Realtime** — WebSockets drive remote Pong play, live chat, presence and
+  tournament notifications.
+- **Security** — bcrypt password hashing, **JWT** auth (httpOnly cookies) guarding
+  `/api`, optional **email-based 2FA (OTP)**, parameterised SQL, and HTTPS/WSS via
+  the NGINX front.
+- **Run** — `docker-compose.yml` builds and starts the services together.
+
+Because the project is module-based, the exact feature set is a chosen subset of
+the official module list; the modules completed in this build (worth 16/14 points)
+are listed below, followed by a full per-requirement compliance report.
+
+## Constraints (2025 subject)
+- The site must be a **Single-Page Application**, work on the latest stable
+  **Firefox** (plus, here, additional browsers), and run via **Docker** with a
+  single command.
+- The **mandatory** core is a live Pong game playable by two players on the same
+  site, a **tournament** system with aliases and matchmaking, registration/auth,
+  and the baseline **security** rules: passwords **hashed**, protection against
+  **SQL injection** and **XSS**, **HTTPS/WSS** everywhere, validated input, and
+  server-side credentials kept in a git-ignored `.env`.
+- Everything beyond the mandatory Pong+tournament base is earned through
+  **modules** (Major = more, Minor = less); a passing project needs the
+  equivalent of **7 major modules** (two minors count as one major).
+- Any library/framework is allowed **only** where a module explicitly authorises
+  it; otherwise the "small justified library" rule of the subject applies.
+
+> Note: this directory is the **backend-focused** snapshot of the group repo; the
+> committed `.env` and the partial XSS hardening flagged below are evaluation
+> caveats, not best practice for a real deployment.
+
+---
+
+# Transcendence Project — Detailed compliance report
 
 ## Points
 
